@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="icon" type="images/png" href="./images/ssi.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+.back-btn {
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #007bff;
+}
+	
+	
+  </style>
+</head>
+<body>
+  <header class="top-nav">
+    <h1>Checkout</h1>
+        <nav>
+		<a href="index.html" class="profile-link">
+		<i class="fa-solid fa-house"></i>
+		<span>Home</span>
+		</a>
+		<a href="profile.html" class="profile-link">
+		<i class="fa-solid fa-user"></i>
+		<span>Profile</span>
+		</a>
+		<a href="card.html" class="card-link">
+		<i class="fa-solid fa-basket-shopping"></i>
+		<span>Cart</span>
+		</a>
+    </nav>
+  </header>
+
+	<button, class="back-btn" onclick="goBack()">
+	  <i class="fa-solid fa-arrow-left"></i>
+	</button,>
+<BR>
+<BR>
+<BR>
+  <div class="checkout-container">
+    <h2>Confirm Your Items</h2>
+    <div id="checkout-items"></div>
+    <div class="total" id="total-price">Total: $0</div>
+  </div>
+  <button onclick="completeCheckout()"><b>Complete Checkout</b></button>
+
+   <script src="script.js"></script>
+<script>
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const checkoutItemsContainer = document.getElementById('checkout-items');
+    const totalPriceEl = document.getElementById('total-price');
+
+    function displayCheckoutItems() {
+      checkoutItemsContainer.innerHTML = '';
+      let total = 0;
+
+      cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('checkout-item');
+        itemDiv.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
+          <div class="checkout-details">
+            <h4>${item.name}</h4>
+            <p>Price: $${item.price}</p>
+            <p>Quantity: ${item.quantity}</p>
+            <p>Subtotal: $${itemTotal}</p>
+          </div>
+        `;
+        checkoutItemsContainer.appendChild(itemDiv);
+      });
+
+      totalPriceEl.textContent = `Total: $${total}`;
+    }
+
+    function confirmOrder() {
+      alert("Order Confirmed!");
+      localStorage.removeItem('cart');
+      window.location.href = "index.html"; // go back to home page or show success page
+    }
+
+    displayCheckoutItems();
+	  }
+    function goBack() {
+    window.history.back();
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!--This is my index page-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ssisurgico</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="icon" type="images/png" href="./images/ssi.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+		<style>
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+
+	
+
+    .cart, .product-detail {
+      background: white;
+      padding: 30px;
+      margin: 20px auto;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+
+    .cart ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cart li {
+      padding: 5px 0;
+    }
+
+    .product {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .product button, .product-detail button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .link-button {
+      background: none;
+      border: none;
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+	
+	    .cart, .auth-container, .profile {
+      background: white;
+      padding: 30px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .cart ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cart li {
+      padding: 5px 0;
+    }
+
+    .auth-container input, .auth-container button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .auth-container {
+      max-width: 300px;
+      margin: 30px auto;
+    }
+
+    .profile {
+      display: none;
+      max-width: 400px;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+	  .product-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 10px;
+  }
+
+  .product-row a img {
+    width: 250px;
+    border-radius:20px;
+    cursor: pointer;
+    transition: transform 0.1s;
+  }
+
+    .zoom-img {
+      transition: transform 0.3s ease;
+      width: 300px;
+    }
+
+    .zoom-img:hover {
+      transform: scale(1.2); /* Zoom in */
+    }
+
+	.profile-link {
+		color: #333;
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		gap: 3px;
+		font-size: 20px;       /* 🔸 Increase overall size */
+		transition: color 0.3s ease;
+	}
+	.profile-link:hover {
+		color: #007bff; /* Change both icon and text color on hover */
+	}
+	.card-link {
+		color: #333; 
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		gap: 3px;
+		font-size: 20px;       /* 🔸 Increase overall size */
+		transition: color 0.3s ease;
+	}
+	.card-link:hover {
+		color: #007bff; /* red or any color you like */
+	}
+	    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+	    h2 {
+      text-align: center;
+    }
+	    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: black;
+      color: white;
+      border: none;
+      margin-top: 10px;
+    }
+
+    .switch {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .cart {
+      background: #f9f9f9;
+      padding: 30px;
+    }
+
+		
+	form {
+			background: white;
+			padding: 30px;
+			border-radius: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 450px;
+		}
+	input, select, textarea {
+		width: 100%;
+		margin-top: 10px;
+		padding: 10px;
+		border-radius: 7px;
+		border: 1px solid #ccc;
+    }
+	input[type="submit"] {
+		background-color: #4CAF50;
+		color: white;
+		border: none;
+		margin-top: 10px;
+		cursor: pointer;
+    }
+	input[type="submit"]:hover {
+    background-color: #45a049;
+    }
+	
+.center-container {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 100vh;           /* full screen height */
+}
+	.back-btn {
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #007bff;
+}
+	
+	</style>
+	</head>
+	<body>
+	
+  <header class="top-nav">
+    <h1>Your Profile</h1>
+    <nav>
+		<a href="index.html" class="profile-link">
+		<i class="fa-solid fa-house"></i>
+		<span>Home</span>
+		</a>
+		<a href="card.html" class="card-link">
+		<i class="fa-solid fa-basket-shopping"></i>
+		<span>Cart</span>
+		</a>
+    </nav>
+	</header>
+	<button, class="back-btn" onclick="goBack()">
+	  <i class="fa-solid fa-arrow-left"></i>
+	</button,>
+
+<div class="center-container">
+	<form>
+		    <h2>Sign up</h2>
+			<div class="container" id="auth-box">
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+
+    <label for="country">Country:</label>
+    <select id="country" required>
+      <option value="">Select your country</option>
+    </select>
+
+    <label for="address">Address:</label>
+    <textarea id="address" rows="3" required></textarea>
+
+    <input type="submit" value="Sign up">
+	</form>
+	</div>
+	</div>
+	<script>
+    const countries = [
+      "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Argentina",
+      "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain",
+      "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin",
+      "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil",
+      "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon",
+      "Canada", "Cape Verde", "Chad", "Chile", "China", "Colombia", "Comoros",
+      "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark",
+      "Djibouti", "Dominican Republic", "Ecuador", "Egypt", "El Salvador",
+      "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia",
+      "Georgia", "Germany", "Ghana", "Greece", "Guatemala", "Guinea",
+      "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia",
+      "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan",
+      "Kazakhstan", "Kenya", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon",
+      "Lesotho", "Liberia", "Libya", "Lithuania", "Luxembourg", "Madagascar",
+      "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Mauritania", "Mauritius",
+      "Mexico", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco",
+      "Mozambique", "Myanmar", "Namibia", "Nepal", "Netherlands", "New Zealand",
+      "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway",
+      "Oman", "Pakistan", "Palestine", "Panama", "Paraguay", "Peru", "Philippines",
+      "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saudi Arabia",
+      "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia",
+      "Slovenia", "Somalia", "South Africa", "South Korea", "Spain", "Sri Lanka",
+      "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan",
+      "Tanzania", "Thailand", "Togo", "Trinidad and Tobago", "Tunisia", "Turkey",
+      "Turkmenistan", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom",
+      "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam",
+      "Yemen", "Zambia", "Zimbabwe"
+    ];
+
+    const countrySelect = document.getElementById("country");
+    countries.forEach(country => {
+      const option = document.createElement("option");
+      option.value = country;
+      option.textContent = country;
+      countrySelect.appendChild(option);
+    });
+	    function goBack() {
+    window.history.back();
+  }
+  </script>
+	</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ssisurgico</title>
+  <link rel="stylesheet" href="styles.css">
+   <script src="script.js"></script>
+  <link rel="icon" type="images/png" href="./images/ssi.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+
+	
+
+    .cart, .product-detail {
+      background: white;
+      padding: 30px;
+      margin: 20px auto;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+
+    .cart ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cart li {
+      padding: 5px 0;
+    }
+
+    .product {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .product button, .product-detail button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .link-button {
+      background: none;
+      border: none;
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+	
+	    .cart, .auth-container, .profile {
+      background: white;
+      padding: 30px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .cart ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cart li {
+      padding: 5px 0;
+    }
+
+    .auth-container input, .auth-container button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .auth-container {
+      max-width: 300px;
+      margin: 30px auto;
+    }
+
+    .profile {
+      display: none;
+      max-width: 400px;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+	  .product-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 10px;
+  }
+
+  .product-row a img {
+    width: 250px;
+    border-radius:20px;
+    cursor: pointer;
+    transition: transform 0.1s;
+  }
+
+    .zoom-img {
+      transition: transform 0.3s ease;
+      width: 300px;
+    }
+
+    .zoom-img:hover {
+      transform: scale(1.2); /* Zoom in */
+    }
+
+	.profile-link {
+		color: #333;
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		gap: 3px;
+		font-size: 20px;       /* 🔸 Increase overall size */
+		transition: color 0.3s ease;
+	}
+	.profile-link:hover {
+		color: #007bff; /* Change both icon and text color on hover */
+	}
+	.card-link {
+		color: #333; 
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		gap: 3px;
+		font-size: 20px;       /* 🔸 Increase overall size */
+		transition: color 0.3s ease;
+	}
+	.card-link:hover {
+		color: #007bff; /* red or any color you like */
+	}
+
+
+
+</style>	
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <h1>ssisurgico</h1>
+    <input type="text" placeholder="Search products...">
+    <nav>
+		<a href="profile.html" class="profile-link">
+		<i class="fa-solid fa-user"></i>
+		<span>Profile</span>
+		</a>
+		<a href="card.html" class="card-link">
+		<i class="fa-solid fa-basket-shopping"></i>
+		<span>Cart</span>
+		</a>
+
+    </nav>
+  </header>
+
+ <br><br>
+ 
+ <div class="product-row">
+  <a href="UVnaillamps.html">  
+  <img src="images/nail lamps.webp" alt="Product A" style="width:400px;" class="zoom-img"> <h3>nail UV lamps</h3>
+	<a href="naildrils.html">
+  <img src="images/nail drils.webp" alt="Product A" style="width:400px;" class="zoom-img"> <h3>nail drils</h3>
+	<a href="naildrilbits.html">
+  <img src="images/nail dril bits.png" alt="Product A" style="width:250px;" class="zoom-img"> <h3>nail dril bits</h3>
+</a></div> 
+<div class="product-row">
+<a href="product.html">
+  <img src="images/SUN5.jpg" alt="Product A" style="width:250px;" class="zoom-img"> <h3>nail</h3>
+<a href="product.html">
+  <img src="images/SUN5.jpg" alt="Product A" style="width:250px;" class="zoom-img"> <h3>nail</h3>
+  <a href="product.html">
+  <img src="images/SUN5.jpg" alt="Product A" style="width:250px;" class="zoom-img"> <h3>nail</h3>
+</a></div>
+
+</body>
+</html>
